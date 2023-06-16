@@ -90,11 +90,11 @@ void setup() {
 void loop() 
 {
   
-  if (Serial.available() > 0) //Serial1 becuase it's the second set of serial pins/Serial input code. Tells us which piece to move
+  if (Serial1.available() > 0) //Serial1 becuase it's the second set of serial pins/Serial input code. Tells us which piece to move
   {
     //Read the data
-    //serialNum = Serial1.read(); //Coords from chess engine
-    serialNum = Serial.parseInt(); //Used for testing
+    serialNum = Serial1.read(); //Coords from chess engine
+    //serialNum = Serial.parseInt(); //Used for testing/Stockfish. Comment out line 96 and un comment this one for mannual inputs. Also, change Serial1.available to Serial.available
     if (serialNum > 0)
     {
       resetDis();
