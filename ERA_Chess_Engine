@@ -142,7 +142,7 @@ void loop() {
     while(digitalRead(audioLine) == LOW) {};
     audio1 = false;
   }
-  else if (audioCount % 2 == 0) //Plays random audio every other turn
+  else if (audioCount % 3 == 0) //Plays random audio every third turn
     playRandomAudio();
   
   silence(); //Plays file 11, which is a blank file. Compensating for hardware limitations
